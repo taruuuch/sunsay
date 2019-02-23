@@ -1,0 +1,96 @@
+body
+	font: $font
+	line-height: $line-height
+	color: $font-color-primary
+
+a
+	transition: ease .3s all
+	text-decoration: none
+	color: $font-color-primary
+	&:hover
+		color: $primary
+		text-decoration: none
+		outline: none
+
+button
+	transition: ease .3s all
+	border: 0
+	background: none
+	font-weight: 500
+	&:hover
+		cursor: pointer
+
+a,
+button,
+input,
+textarea,
+select
+	&:focus
+		border: none
+		outline: none
+
+.section
+	position: relative
+
+h2
+	font: $h2-font
+
+.popup
+	width: 100%
+	height: 100%
+	position: fixed
+	z-index: 999999
+	top: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .55)
+	display: none
+	justify-content: center
+	&__container
+		position: relative
+		align-self: center
+		height: 80vh
+		width: 80vw
+	&-example
+		&-item
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 100%
+			height: 80vh
+		.prev-arrow,
+		.next-arrow
+			display: flex
+			justify-content: center
+			height: 45px
+			width: 45px
+			background-color: #c7c9c7
+			border-radius: 2px
+			transition: background-color .3s ease-in-out
+			position: absolute
+			z-index: 10
+			top: 50%
+			transform: translateY(-50%)
+			&:hover
+				background-color: #ffe863
+				cursor: pointer
+			& > img
+				align-self: center
+				width: 10px
+				height: 20px
+		.prev-arrow
+			left: -50px
+			& > img
+				transform: rotateY(180deg)
+		.next-arrow
+			right: -50px
+			background-color: $primary
+	&-close
+		position: absolute
+		right: -40px
+		top: 15px
+		opacity: .8
+		transition: opacity .3s ease-in-out
+		& > img
+			width: 25px
+		&:hover
+			opacity: 1
+			cursor: pointer

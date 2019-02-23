@@ -1,0 +1,245 @@
+.header
+	position: fixed
+	z-index: 100
+	width: 100%
+	top: 0
+	left: 0
+	display: flex
+	font-weight: 500
+	&__logotype
+		position: relative
+		z-index: 2
+		flex: 1 10%
+		align-self: center
+		margin-left: 30px
+		& > a,
+		& > a > img
+			vertical-align: middle
+	&__navbar
+		position: relative
+		z-index: 2
+		flex: 1 90%
+		align-self: center
+		& > .navbar
+			display: flex
+		.navbar
+			&__list
+				flex: 1 85%
+				&-item
+					margin-left: 40px
+					position: relative
+					&:before
+						display: block
+						position: absolute
+						z-index: 2
+						content: ''
+						height: 10px
+						width: 0
+						background-color: #ffe863
+						transition: width .5s ease-in-out
+						left: 0
+						bottom: 0
+					& > span
+						position: relative
+						z-index: 5
+					&:hover
+						color: #222222
+						&:before
+							width: 100%
+			&__right
+				flex: 1 15%
+				display: flex
+				justify-content: center
+				&-item
+					margin-left: 40px
+					position: relative
+					&:before
+						display: block
+						position: absolute
+						z-index: 2
+						content: ''
+						height: 10px
+						width: 0
+						background-color: #ffe863
+						transition: width .5s ease-in-out
+						left: 0
+						bottom: 0
+					& > span
+						position: relative
+						z-index: 5
+					&:hover
+						color: #222222
+						&:before
+							width: 100%
+	&__request
+		position: relative
+		z-index: 5
+		flex: 1 10%
+		align-self: center
+		text-align: right
+		& > a
+			position: relative
+			z-index: 1
+			top: 10px
+			right: 15px
+			&:hover
+				color: #ffffff
+		.request-close
+			display: none
+			position: fixed
+			z-index: 1000
+			top: 0
+			right: 0
+			background: url('../img/close_background.svg')
+			width: 80px
+			height: 76px
+			& > .close
+				position: relative
+				top: 15px
+				right: 15px
+				z-index: 1001
+				width: 24px
+				&:hover
+					cursor: pointer
+		& > #buttonBack
+			position: absolute
+			z-index: 1
+			top: 0
+			right: 0
+	&__button
+		position: absolute
+		z-index: 10
+		right: 0
+		top: 0
+		opacity: 1
+		#nav-icon
+			display: none
+			position: absolute
+			top: 5px
+			right: 10px
+			width: 32px
+			height: 32px
+			&:hover
+				cursor: pointer
+	&__house-img
+		position: fixed
+		z-index: 11
+		right: 0
+		bottom: 0
+
+.navbar-mobile
+	display: none
+
+@media (max-width: 1536px)
+	.header
+		&__navbar
+			flex: 1 75%
+		&__request
+			flex: 1 15%
+
+@media (max-width: 1366px)
+	.header
+		&__navbar
+			.navbar
+				&__right,
+				&__list
+					font-size: .875rem
+				&__right
+					justify-content: flex-start
+
+@media (max-width: 1024px)
+	.header
+		&__logotype
+			margin-top: 15px
+		&__navbar
+			display: none
+		&__request
+			display: none
+		&__button
+			background-image: url('../img/m_button_background.svg')
+			height: 55px
+			width: 55px
+			top: 0
+			opacity: 1
+			#nav-icon
+				display: block
+
+@media (max-width: 768px)
+	.header__request
+		z-index: 5 !important
+	.navbar-mobile
+		background-color: #ffffff
+		height: 100%
+		width: 100%
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 9999
+		&-container
+			margin: 15px
+			.navbar
+				position: relative
+				&-logotype
+					& > img
+						height: 32px
+				&-language
+					align-self: center
+					& > a:not(:last-of-type)
+						margin-right: 5px
+				&-close
+					& > img
+						position: absolute
+						z-index: 2
+						top: 15px
+						right: 15px
+						width: 24px
+						&:hover
+							cursor: pointer
+					&:before
+						content: ''
+						background-image: url('../img/close_background.svg')
+						background-repeat: no-repeat
+						background-position: center
+						height: 76px
+						position: absolute
+						z-index: 1
+						width: 80px
+						right: 0
+						top: 0
+				&-list
+					display: flex
+					flex-direction: column
+					margin-top: 30px
+					&-top
+						display: flex
+						flex-direction: row
+				&-item:not(:last-of-type)
+					margin-bottom: 15px
+				&-request
+					position: absolute
+					z-index: 2
+					right: 15px
+					top: 100px
+					background: url('../img/bg.svg') no-repeat center
+					height: 65px
+					width: 105px
+					display: flex
+					justify-content: center
+					& > a
+						align-self: center
+						text-align: center
+						font-size: .875rem
+						&:hover
+							color: #ffffff
+				&-contacts
+					margin-top: 30px
+					& > div:not(:last-of-type)
+						margin-bottom: 15px
+
+@media (max-width: 420px)
+	.header__logotype
+		margin-top: 5px
+		& > a > img
+			height: 32px
+	.navbar-logotype
+		height: 24px

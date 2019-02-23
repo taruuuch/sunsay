@@ -1,0 +1,20 @@
+.request-popup
+	.request-popup__container
+		.request-title
+			h2 Підключімо вас до зеленої енергії:
+		.request-question
+			|Мене звати
+			input.custom-field(type="text" placeholder="Вкажіть ваше ім'я")
+			|
+			|мене цікавить
+			select.custom-field.custom-select#selectType(name="consultation")
+				option(value="Конслультація" selected) Конслультація
+				option(value="Конслультація1") Конслультація1
+				option(value="Конслультація2") Конслультація2
+			|<br/>Зателефонуйте мені на номер
+			input.custom-field#tel(type="text" name="phone" placeholder="+380")
+			|та надішліть мені
+			|<br/>інформацію на email
+			input.custom-field(type="text" placeholder="youremail@mail.com")
+			.request-button
+				a.btn(href="#") Надіслати

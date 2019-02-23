@@ -1,0 +1,198 @@
+.review
+	&-item
+		outline: none
+		height: 500px
+		display: flex !important
+	&__content
+		padding-right: 30px
+		padding-left: 30px
+		&-title
+			.mobile-count
+				display: none
+				color: $secondary
+		&-list
+			position: relative
+			&__item
+				align-self: center
+				display: flex
+				&-image
+					position: relative
+					flex: 1 25%
+					.review
+						&-image
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								z-index: 1
+								background-image: url('../img/review_background.svg')
+								background-repeat: no-repeat
+								background-position: center
+								background-size: contain
+								width: 650px
+								height: 500px
+								left: 50%
+								transform: translateX(-50%)
+								margin-top: -45px
+								margin-left: 15px
+							& > img
+								position: relative
+								z-index: 2
+						&-photo
+							position: absolute
+							z-index: 3
+							top: 30px
+							right: -80px
+						&-arrows
+							position: absolute
+							z-index: 4
+							right: -45px
+							bottom: 30px
+							display: flex
+				&-info
+					flex: 1 75%
+					margin-left: 100px
+					.review
+						font-size: 1.125rem
+						&-count
+							color: $secondary
+							margin-bottom: 75px
+						&-name
+							font-weight: 500
+							margin-bottom: 10px
+						&-role
+							font-size: 0.875rem
+							color: $secondary
+						&-message
+							margin-top: 30px
+							max-width: 60%
+	.review-prev,
+	.review-next
+		display: flex
+		justify-content: center
+		height: 45px
+		width: 45px
+		background-color: #c7c9c7
+		border-radius: 2px
+		transition: background-color .3s ease-in-out
+		position: absolute
+		z-index: 10
+		bottom: 60px
+		&:hover
+			background-color: #ffe863
+			cursor: pointer
+		& > img
+			align-self: center
+			width: 10px
+			height: 20px
+	.review-prev
+		left: 523px
+		& > img
+			transform: rotateY(180deg)
+	.review-next
+		left: 568px
+		background-color: $primary
+
+@media (max-width: 1366px)
+	.review
+		&__content
+			&-title
+				padding-top: 75px
+	.review__content-list__item-info .review-message
+		max-width: 85%
+
+@media (max-width: 768px)
+	.review
+		&__content
+			&-title
+				padding-top: 15px
+	.review__content-list__item-image .review-image::before
+		display: none
+	.review__content-list__item
+		flex-direction: column
+		&-image
+			order: 2
+		&-info
+			order: 1
+			margin-left: 0
+			margin-bottom: 30px
+	.review__content-list__item-info .review-count
+		display: none
+	.review__content-title .mobile-count,
+	.review__content-title h2
+		display: inline-block
+	.review__content-title
+		position: relative
+	.review__content-title .mobile-count
+		position: absolute
+		right: 30px
+		bottom: 10px
+	.review__content-title h2
+		margin: 0
+	.review__content-list__item-image .review-image
+		display: flex
+		justify-content: center
+		.review-photo
+			top: -20px
+			right: 0
+		& > img
+			height: 270px
+	.review .review-prev
+		left: 452px
+	.review .review-next
+		left: 497px
+	.review .review-next,
+	.review .review-prev
+		bottom: 30px
+	.review__content-list__item-info .review-message
+		max-width: 100%
+
+@media (max-width: 420px)
+	.review__content-title h2
+		font-size: 1.5rem
+	.review__content-list__item-image .review-image
+		.review-photo
+			top: -20px
+			right: 0
+			& > img
+				height: 75px
+		& > img
+			height: 200px
+	.review__content-list__item-info .review-message
+		margin-top: 15px
+		font-size: .875rem
+	.review .review-prev
+		left: 246px
+	.review .review-next
+		left: 291px
+	.review .review-next,
+	.review .review-prev
+		bottom: 60px
+
+@media (max-width: 320px)
+	.review__content-list__item-image .review-image
+		.review-photo
+			top: -20px
+			right: -20px
+		& > img
+			width: 100%
+			height: 140px
+	.review__content-list__item-info .review-name,
+	.review__content-list__item-info .review-message
+		margin-bottom: 0
+	.review-item
+		height: 400px
+	.review__content-title .mobile-count
+		bottom: 0
+	.review__content-list__item-info
+		margin-bottom: 10px
+	.review .review-prev
+		left: 228px
+	.review .review-next
+		left: calc(228px + 32px)
+	.review .review-next,
+	.review .review-prev
+		bottom: 30px
+		height: 32px
+		width: 32px
+

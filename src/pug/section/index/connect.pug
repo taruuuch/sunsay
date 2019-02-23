@@ -1,0 +1,24 @@
+.connect__content
+	.connect__content-info
+		.connect__content-title
+			h2 Підключімо вас до зеленої енергії:
+		.connect__content-question
+			.message
+				|Мене звати
+				input.custom-field(type="text" name="fullname" placeholder="Вкажіть ваше ім'я")
+				|
+				|мене цікавить
+				select.custom-field.custom-select#consultation(name="consultation")
+					option(value="Конслультація" selected) Конслультація
+					option(value="Конслультація1") Конслультація1
+					option(value="Конслультація2") Конслультація2
+				|
+				| Зателефонуйте мені на номер
+				input.custom-field#phone(type="text" name="phone" placeholder="+380")
+				|
+				|та надішліть мені інформацію на email
+				input.custom-field(type="text" name="email" placeholder="youremail@mail.com")
+				.connect__content-button
+					a.btn(href="#") Надіслати
+	.connect__content-image
+		img(src="img/connect.png", alt="")

@@ -1,0 +1,153 @@
+.work
+	&__content
+		padding-left: 30px
+		padding-right: 30px
+		display: flex
+		&-list
+			flex: 1 25%
+			&__item
+				font-size: 1.5rem
+				font-weight: 500
+				// transition: font-size .5s, font-family .5s
+				&:not(:last-of-type)
+					margin-bottom: 40px
+				& > span
+					position: relative
+					&:before
+						display: block
+						position: absolute
+						z-index: 2
+						content: ''
+						height: 10px
+						width: 0
+						background-color: #ffe863
+						transition: width .5s ease-in-out
+						left: 0
+						bottom: 0
+					& > span
+						position: relative
+						z-index: 5
+				&:hover
+					cursor: pointer
+					& > span:before
+						width: 100%
+			.active
+				position: relative
+				z-index: 2
+				// transition: font-size .5s, font-family .5s, font-weight .5s
+				font-size: 3rem
+				font-family: 'Bebas Neue Cyrillic', sans-serif
+				& > span
+					position: relative
+					&:before
+						display: block
+						position: absolute
+						z-index: 2
+						content: ''
+						height: 20px
+						width: 100%
+						background-color: #ffe863
+						transition: width .5s ease-in-out
+						left: 0
+						bottom: 8px
+					& > span
+						position: relative
+						z-index: 5
+		&-info
+			align-self: center
+			flex: 1 75%
+			&__item
+				display: none
+				&-info
+					align-self: center
+					flex: 1 60%
+					& > .message
+						font-size: 1.125rem
+						max-width: 70%
+					& > .days
+						margin-top: 100px
+						margin-bottom: 100px
+						color: $secondary
+					& > .button
+						& > .btn
+							background-color: $primary
+							border: 2px solid $primary
+							padding: 10px 30px
+							border-radius: 2px
+							transition: .3s
+							&:hover
+								border: 2px solid #ffe863
+								background-color: #ffe863
+								color: #222222
+				&-image
+					flex: 1 40%
+					& > .svgdes
+						display: block
+					& > .svgmob
+						display: none
+			& > .active
+				display: flex
+
+@media (max-width: 1366px)
+	.work
+		&__content
+			&-list
+				&__item
+					font-size: 1.3rem
+					&:not(:last-of-type)
+						margin-bottom: 50px
+
+@media (max-width: 1024px)
+	.work
+		&__content
+			flex-direction: column
+			&-list
+				flex: 1 100%
+				width: 100%
+				margin-bottom: 30px
+				&__item
+					margin-bottom: 0 !important
+					font-size: 1rem
+					height: 50px
+					padding-top: 15px
+					&:not(:last-of-type)
+						margin-right: 30px
+				.active
+					font-size: 2rem
+					padding-top: 0
+			&-info
+				&__item
+					flex-direction: column
+					&-info
+						flex: 1 100%
+						margin-bottom: 30px
+						& > .days
+							margin-top: 15px
+							margin-bottom: 15px
+					&-image
+						flex: 2 100%
+						align-self: center
+						& > .svgdes
+							display: none
+						& > .svgmob
+							display: block
+
+
+@media (max-width: 768px)
+	.work
+		&__content
+			&-info
+				&__item
+					&-image
+						display: flex
+						justify-content: center
+						& > img
+							width: 50%
+
+@media (max-width: 420px)
+	.work
+		&__content
+			&-info
+				&__item
+					&-image
+						display: none

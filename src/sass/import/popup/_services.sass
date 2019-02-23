@@ -1,0 +1,94 @@
+// popup
+.services-popup
+	display: none
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	background-color: rgba(#000, .3)
+	width: 100%
+	height: 100%
+	&__container
+		width: 60%
+		margin: auto
+		background-color: $primary
+		& > .services__title
+			text-align: center
+			font-size: 1.5rem
+			font-weight: 500
+			padding-top: 15px
+			padding-bottom: 15px
+		.services__list
+			display: flex
+			justify-content: center
+			padding-bottom: 30px
+			margin-left: -50px
+			margin-right: -50px
+		.services__list-item
+			flex: 1 300px
+			max-width: 300px
+			background-color: #ffffff
+			padding: 50px
+			&:hover,
+			&:focus
+				outline: none
+			&:not(:last-of-type)
+				margin-right: 30px
+			.description
+				min-height: 190px
+				&__list
+					padding: 0
+					margin: 0
+					padding-top: 30px
+					list-style-position: inside
+					color: $primary
+					& > li
+						margin-bottom: 5px
+						& > span
+							color: #222222
+						&:last-child
+							margin-bottom: 0
+			.title
+				text-align: center
+				font-weight: 500
+				font-size: 1.5rem
+				& > span
+					position: relative
+					&:before
+						display: block
+						position: absolute
+						z-index: 2
+						content: ''
+						height: 15px
+						width: 0
+						background-color: #ffe863
+						transition: width .5s ease-in-out
+						left: 0
+						bottom: 0
+					& > span
+						position: relative
+						z-index: 5
+			.price
+				text-align: center
+				margin-bottom: 16px
+				& > span
+					font-size: 1.875rem
+					font-weight: 500
+			.button
+				text-align: center
+				& > .btn
+					border: 2px solid $primary
+					padding: 10px 30px
+					border-radius: 2px
+					&:hover
+						border: 2px solid #ffe863
+						background-color: #ffe863
+						color: #222222
+			&:hover
+				& > .title > span:before
+					width: 100%
+
+@media (max-width: 1366px)
+	.services-popup
+		&__container
+			width: 80%

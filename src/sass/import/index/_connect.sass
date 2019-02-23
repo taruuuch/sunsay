@@ -1,0 +1,114 @@
+.connect
+	&__content
+		display: flex
+		flex-direction: row
+		padding-left: 30px
+		padding-right: 30px
+		&-info
+			flex: 1 65%
+			max-width: 65%
+			align-items: center
+		&-image
+			flex: 1 35%
+			max-width: 65%
+			align-items: center
+			text-align: center
+		&-title > h2
+			margin: 0
+		&-question
+			max-width: 80%
+			font-size: 1.5rem
+			line-height: 3
+			margin-top: 100px
+			.custom-field
+				border: none
+				background: transparent
+				border-bottom: 2px solid #222222
+				color: #222222
+				width: 300px
+				font-size: 1.5rem
+				font-weight: 500
+				&:placeholder
+					color: #999999
+					font-weight: 400
+			.custom-select
+				appearance: none
+				background: url('../img/icon/select-arrow.svg') 100% no-repeat transparent
+				background-size: 8%
+				&:placeholder
+					color: #999999
+					font-weight: 400
+		&-button
+			margin-top: 100px
+			& > .btn
+				background-color: #ffd100
+				border: 2px solid #ffd100
+				padding: 10px 120px
+				font-size: 1rem
+				border-radius: 2px
+				transition: .3s
+				&:hover
+					border: 2px solid #ffe863
+					background-color: #ffe863
+					color: #222222
+
+@media (max-width: 1536px)
+	.connect__content
+		&-question,
+		&-button
+			margin-top: 50px
+
+@media (max-width: 1440px)
+	.connect__content-question
+		max-width: 70%
+	.connect__content-image
+		right: 30px
+
+@media (max-width: 1366px)
+	.connect
+		&__content
+			&-title
+				padding-top: 75px
+
+@media (max-width: 1280px)
+	.connect
+		&__content
+			&-question
+				max-width: 70%
+				font-size: 1.3rem
+				line-height: 2.5
+				.custom-field
+					width: 250px
+
+@media (max-width: 1024px)
+	.connect
+		&__content
+			&-question,
+			&-button
+				margin-top: 30px
+			&-title
+				padding-top: 30px
+
+@media (max-width: 768px)
+	.connect
+		&__content
+			&-question
+				max-width: 100%
+			&-image
+				display: none
+
+@media (max-width: 420px)
+	.connect
+		&__content
+			&-title > h2
+				font-size: 1.5rem
+			&-question
+				font-size: .875rem
+				.custom-field,
+				.custom-select
+					font-size: .875rem
+					width: 150px
+			&-button
+				& > .btn
+					font-size: .875rem
+					padding: 7px 40px

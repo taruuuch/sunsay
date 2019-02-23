@@ -1,0 +1,59 @@
+header.header
+	.header__logotype
+		a(href="/")
+			img.img-responsive(src="img/logo.png", alt="sunsay energy")
+	.header__navbar
+		nav.navbar
+			.navbar__list
+				a.navbar__list-item(href="#" data-popup="services")
+					span Послуги та ціни
+				a.navbar__list-item(href="#")
+					span Наші проекти
+				a.navbar__list-item(href="green.html")
+					span Зелений тариф
+				a.navbar__list-item(href="#")
+					span Про технологію
+				a.navbar__list-item(href="#")
+					span Про нас
+			.navbar__right
+				a.navbar__right-item(href="#contact")
+					span Контакты
+	.header__request
+		svg(id="buttonBack" width="180" height="80")
+			path(id="buttonFrom" fill-rule="evenodd" fill="rgb(255, 209, 0)" d="M180,80V0")
+		a.request-btn(href="#") Залишити<br/>заявку
+		.request-close
+			img.close(src="img/icon/Close.svg", alt="")
+	.header__button
+		#nav-icon
+			img(src="img/icon/Menu.svg", alt="")
+	.navbar-mobile
+		.navbar-mobile-container
+			.navbar-list-top
+				.navbar-logotype
+					img(src="img/logo.png", alt="")
+				.navbar-language
+					a(href="#") UA
+					a(href="#") EN
+					a(href="#") RU
+				.navbar-close
+					img(src="img/icon/Close.svg", alt="")
+			.navbar-list
+				.navbar-item
+					a(href="#") Послуги та ціни
+				.navbar-item
+					a(href="#") Наші проекти
+				.navbar-item
+					a(href="#") Зелений тариф
+				.navbar-item
+					a(href="#") Про технологію
+				.navbar-item
+					a(href="#") Про нас
+			.navbar-request
+				a(href="#") Залишити заявку
+			.navbar-contacts
+				.address м. Київ, вул. Машинобудівна, 41
+				.phone
+					a(href="tel:+380443345010") +38 044 334 50 10
+				.email
+					a(href="mailto:hello@sunsayenergy.com") hello@sunsayenergy.com

@@ -1,0 +1,157 @@
+.electrostation
+	padding-left: 30px
+	padding-right: 30px
+	&__info
+		animation-duration: 1s
+		z-index: 10 !important
+	&__right
+		position: absolute
+		top: 0
+		right: 0
+	&__house
+		position: absolute
+		z-index: 5
+		right: 0
+		top: 0
+		height: 100vh
+		&-img
+			position: absolute
+			bottom: 0
+			right: -110px
+			z-index: 7
+			width: 1050px
+	&__title
+		& > h1
+			font: $h1-font
+			line-height: 1.2
+			text-transform: uppercase
+			margin: 0
+	&__description
+		font-size: 1.125rem
+		margin-top: 100px
+		margin-bottom: 100px
+	&__button
+		& > .btn
+			background-color: $primary
+			border: 2px solid $primary
+			padding: 10px 30px
+			border-radius: 2px
+			transition: all .3s
+			&:hover
+				border: 2px solid #ffe863
+				background-color: #ffe863
+				color: #222222
+	&__contact
+		animation-duration: 1s
+		position: absolute
+		bottom: 30px
+		display: flex
+		flex-wrap: nowrap
+		& > div:not(:last-of-type)
+			margin-right: 30px
+		& > .phone,
+		& > .email
+			position: relative
+			&:before
+				display: block
+				position: absolute
+				z-index: 2
+				content: ''
+				height: 10px
+				width: 0
+				background-color: #ffe863
+				transition: width .5s ease-in-out
+				left: 0
+				bottom: 0
+			&:hover:before
+				width: 100%
+		& > div > a
+			position: relative
+			z-index: 3
+			color: #222222
+			&:hover
+				cursor: pointer
+	&__switch
+		position: absolute
+		z-index: 10
+		right: 30px
+		top: 100px
+		display: flex
+		& > a
+			transition: color .3s ease-in-out
+			&.active,
+			&:hover
+				color: #ffffff
+			&:not(:last-of-type)
+				margin-right: 15px
+
+@media (max-width: 1536px)
+	.electrostation
+		&__house
+			&-img
+				width: 800px
+		&__contact
+			font-size: .875rem
+			& > div:not(:last-of-type)
+				margin-right: 15px
+		&__description
+			margin-top: 50px
+			margin-bottom: 50px
+
+@media (max-width: 1366px)
+	.electrostation
+		&__house
+			&-img
+				width: 500px
+		&__description
+			margin-top: 30px
+			margin-bottom: 30px
+		&__contact
+			& > div:not(:last-of-type)
+				margin-right: 10px
+
+@media (max-width: 1024px)
+	.electrostation
+		#electroBack
+			display: none
+		&__info
+		&__title > h1
+			font-size: 2.5rem
+		&__description
+			font-size: 1rem
+			margin-top: 30px
+			margin-bottom: 30px
+		&__house
+			background-image: url('../img/m_header_background.svg')
+			background-repeat: no-repeat
+			background-position: right bottom
+			background-size: 60%
+			width: 100%
+			&-img
+				width: 500px
+				right: 0
+		&__contact,
+		&__switch
+			display: none
+
+@media (max-width: 768px)
+	.electrostation__info
+		position: relative
+		z-index: 5
+
+@media (max-width: 420px)
+	.electrostation
+		&__house
+			&-img
+				width: 250px !important
+		&__title > h1
+			font-size: 2rem
+		&__description
+			font-size: .875rem
+			margin-top: 15px
+			margin-bottom: 15px
+		&__info
+			margin-top: -100px
+		&__button
+			& > a > .btn
+				font-size: .875rem
